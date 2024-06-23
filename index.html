@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajo Final Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+            background-image: url('bg2.gif');
+            background-size: auto;
+            color: #333; 
+        }
+        .navbar {
+            background-color: #AA336A;
+        }
+        .navbar-brand {
+            color: white; 
+        }
+        .navbar-nav .nav-link {
+            color: white; 
+        }
+        .container-text {
+            background-image: url('bg.gif');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 20px;
+        }
+        .container-text h1,
+        .container-text p {
+            margin-bottom: 0; 
+        }
+        .card-body a.btn {
+            transition: background-color 0.3s, transform 0.3s;
+            background-color: #ff9bb8;
+            border-color: #ff9bb8;
+            color: white;
+        }
+        .card-body a.btn:hover {
+            background-color: #ff7aa9;
+            border-color: #ff7aa9;
+            transform: scale(1.05);
+        }
+        .card {
+             
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Jerdaine's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		
+    </nav>
+
+    <!-- Container with Text Above Projects -->
+    <div class="container-fluid mt-5 container-text">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>My Portfolio</h1>
+                <p>These are my activities</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container mt-3" id="projects"> <!-- Added id="projects" to navigate to projects section -->
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="resimage.png" class="card-img-top" alt="Project Image"> <!-- Background image for project card -->
+                    <div class="card-body">
+                        <h5 class="card-title">RESUME</h5>
+                      
+                        <a href="Gajo_Jerdaine_Resume.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="regimage.jpg" class="card-img-top" alt="Project Image"> <!-- Background image for project card -->
+                    <div class="card-body">
+                        <h5 class="card-title">REGISTRATION FORM</h5>
+                     
+                        <a href="REGFORM.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="restimage.jpg" class="card-img-top" alt="Project Image"> <!-- Background image for project card -->
+                    <div class="card-body">
+                        <h5 class="card-title">RESTAURANT MENU</h5>
+                     
+                        <a href="RestaurantMenu.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="storeimage.jpg" class="card-img-top" alt="Project Image"> <!-- Background image for project card -->
+                    <div class="card-body">
+                        <h5 class="card-title">SARI-SARI STORE</h5>
+                  
+                        <a href="Sari-Sari_Store.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

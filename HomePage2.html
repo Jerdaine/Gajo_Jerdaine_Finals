@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage 2</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #FF69B4;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"],
+        select,
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #FF69B4;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #D060A8;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #FF69B4;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home Page 2</h1>
+
+    <form id="stockForm">
+        <label for="itemName">Select Product:</label><br>
+        <select id="itemName" name="itemName">
+            <option value="">Select an item...</option>
+            <option value="Blue Jeans">Blue Jeans</option>
+            <option value="Black Jeans">Black Jeans</option>
+            <option value="White Jeans">White Jeans</option>
+            <option value="Grey Jeans">Grey Jeans</option>
+            <option value="Green T-Shirt">Green T-Shirt</option>
+            <option value="Blue T-Shirt">Blue T-Shirt</option>
+            <option value="Black T-Shirt">Black T-Shirt</option>
+            <option value="White T-Shirt">White T-Shirt</option>
+            <option value="Dior Perfume">Dior Perfume</option>
+            <option value="Jo Malone Perfume">Jo Malone Perfume</option>
+            <option value="YSL Perfume">YSL Perfume</option>
+            <option value="Prada Perfume">Prada Perfume</option>
+            <option value="White Sando">White Sando</option>
+            <option value="Black Sando">Black Sando</option>
+            <option value="Grey Sando">Grey Sando</option>
+            <option value="Blue Sando">Blue Sando</option>
+            <option value="Toy Car">Toy Car</option>
+            <option value="Toy Plane">Toy Plane</option>
+            <option value="Toy Train">Toy Train</option>
+            <option value="Toy Doll">Toy Doll</option>
+        </select><br>
+        <label for="quantity">Quantity to Add:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" step="1"><br><br>
+        <button type="submit">Add Stock</button>
+    </form>
+
+    <div class="back-link">
+        <a href="Sari-Sari_Store.html">Back to Homepage</a>
+    </div>
+
+    <script>
+        const inventory = {
+            "Blue Jeans": 0,
+            "Black Jeans": 0,
+            "White Jeans": 0,
+            "Grey Jeans": 0,
+            "Green T-Shirt": 0,
+            "Blue T-Shirt": 0,
+            "Black T-Shirt": 0,
+            "White T-Shirt": 0,
+            "Dior Perfume": 0,
+            "Jo Malone Perfume": 0,
+            "YSL Perfume": 0,
+            "Prada Perfume": 0,
+            "White Sando": 0,
+            "Black Sando": 0,
+            "Grey Sando": 0,
+            "Blue Sando": 0,
+            "Toy Car": 0,
+            "Toy Plane": 0,
+            "Toy Train": 0,
+            "Toy Doll": 0
+        };
+
+        document.getElementById("stockForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const itemName = document.getElementById("itemName").value;
+            const quantity = parseInt(document.getElementById("quantity").value);
+            if (!itemName || isNaN(quantity) || quantity <= 0) {
+                alert("Please provide valid input.");
+                return;
+            }
+            if (inventory.hasOwnProperty(itemName)) {
+                inventory[itemName] += quantity;
+                alert("Stock added successfully.");
+            } else {
+                alert("Item not found in inventory.");
+            }
+        });
+    </script>
+</body>
+</html>

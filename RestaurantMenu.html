@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        background-image: url('background.jpg');
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+	.button:hover{
+	 background-color: white;
+	 color: black;
+	 }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: none;
+        border-radius: 8px;
+    }
+
+    .button1 {background-color: DarkSalmon;}
+    .button2 {background-color: DarkSalmon;} 
+    .button3 {background-color: DarkSalmon;}
+    .button4 {background-color: DarkSalmon;} 
+    .button5 {background-color: DarkSalmon;} 
+
+    .menu-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .menu-item img {
+        width: 150px;
+        height: 150px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .menu-item p {
+        margin: 0;
+        font-size: 16px;
+    }
+    .menu-item button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+	 .menu-item button:hover{
+	 background-color: white;
+	 color: red;
+	 }
+</style>
+</head>
+<body>
+
+<h1><center>RESTAURANT MENU</center></h1>
+
+<div class="container">
+<button class="button button1" onclick="showSection('#MainDish')"><b>MAIN DISH</b></button>
+<button class="button button2" onclick="showSection('#Vegetables')"><b>VEGETABLES</b></button>
+<button class="button button3" onclick="showSection('#Desserts')"><b>DESSERTS</b></button>
+<button class="button button4" onclick="showSection('#Drinks')"><b>DRINKS</b></button>
+<button class="button button5" onclick="showSection('#Add-Ons')"><b>ADD ONS</b></button>
+
+<div id="MainDish" class="menu-item">
+    <div>
+        <img src="MainDish1.jpg">
+        <h3>Dish 1: Adobong Manok - 150.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Adobong Manok', 150)">Add Item Dish 1</button>
+    </div>
+    <div>
+        <img src="MainDish2.jpg">
+        <h3>Dish 2: Sinigang na Hipon - 160.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Sinigang na Hipon', 160)">Add Item Dish 2</button>
+    </div>
+    <div>
+        <img src="MainDish3.jpg">
+        <h3>Dish 3: Menudo - 150.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Menudo', 150)">Add Item Dish 3</button>
+    </div>
+    <div>
+        <img src="MainDish4.jpg">
+        <h3>Dish 4: Lechon - 200.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Lechon', 200)">Add Item Dish 4</button>
+    </div>
+    <div>
+        <img src="MainDish5.jpg">
+        <h3>Dish 5: Bicol Express - 180.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Bicol Express', 180)">Add Item Dish 5</button>
+    </div>
+</div>
+<div id="Vegetables" class="menu-item">
+    <div>
+        <img src="Vegetabledish1.jpg">
+        <h3>Veg 1: Pinakbet - 90.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Pinakbet', 90)">Add Item Veg 1</button>
+    </div>
+    <div>
+        <img src="Vegetabledish2.jpg">
+        <h3>Veg 2: Chop suey - 160.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Chop suey', 160)">Add Item Veg 2</button>
+    </div>
+    <div>
+        <img src="Vegetabledish3.jpg">
+        <h3>Veg 3: Munggo - 100.00</h3> 
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Munggo', 100)">Add Item Veg 3</button>
+    </div>
+</div>
+<div id="Desserts" class="menu-item">
+    <div>
+        <img src="Dessert1.jpg">
+        <h3>Dessert 1: Matcha Cake - 150.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Matcha Cake', 150)">Add Item Dessert 1</button>
+    </div>
+    <div>
+        <img src="Dessert2.jpg">
+        <h3>Dessert 2: Churros - 160.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Churros', 160)">Add Item Dessert 2</button>
+    </div>
+    <div>
+        <img src="Dessert3.jpg">
+        <h3>Dessert 3: Ice cream - 125.00</h3> 
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Ice cream', 125)">Add Item Dessert 3</button>
+    </div>
+</div>
+<div id="Drinks" class="menu-item">
+    <div>
+        <img src="Drink1.jpg">
+        <h3>Drink 1: Watermelon Slushies - 180.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Watermelon Slushies', 180)">Add Item Drink 1</button>
+    </div>
+    <div>
+        <img src="Drink2.jpg">
+        <h3>Drink 2: Orange Juice - 150.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Orange Juice', 150)">Add Item Drink 2</button>
+    </div>
+    <div>
+        <img src="Drink3.jpg">
+        <h3>Drink 3: Lemonade - 160.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Lemonade', 160)">Add Item Drink 3</button>
+    </div>
+</div>
+<div id="Add-Ons" class="menu-item">
+    <div>
+        <img src="AddOns1.jpg">
+        <h3>AddOns 1: Chicken Soup - 80.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Chicken Soup', 80)">Add Item AddOns 1</button>
+    </div>
+    <div>
+        <img src="AddOns2.jpg">
+        <p>AddOns 2: Rice - 50.00</p>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Rice', 50)">Add Item AddOns 2</button>
+    </div>
+    <div>
+        <img src="AddOns3.jpg">
+        <h3>AddOns 3: Water - 50.00</h3>
+        <input type="number" class="quantity-input" value="" min="0">
+        <button onclick="addItem('Water', 50)">Add Item AddOns 3</button>
+    </div>
+</div>
+<div class="order-container">
+    <div class="dashboard-buttons">
+        <button onclick="calculateTotalOrder()"><b>Total Orders</b></button>
+    </div>
+    <div class="dashboard-description order-list-container">
+        <h3>List of Orders:</h3>
+        <ul class="order-list" id="orderList"></ul>
+        <h3>Total Amount: <span id="totalOrder">P</span></h3>
+    </div>
+</div>
+
+<script>
+function showSection(sectionId) {
+    var menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(function(item) {
+        item.style.display = 'none';
+    });
+    
+    document.querySelector(sectionId).style.display = 'flex';
+    document.querySelector(sectionId).style.flexWrap = 'wrap';
+    document.querySelector(sectionId).style.gap = '20px';
+    document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+};
+var orders = [];
+    function toggleCategory(category) {
+	var dishes = document.getElementsByClassName('menu-item');
+        for (var i = 0; i < dishes.length; i++) {
+        if (dishes[i].classList.contains(category)) {
+            dishes[i].style.display = "block";
+		} else {
+            dishes[i].style.display = "none";
+            }
+        }
+    }
+    function addItem(itemName, price) {
+    var quantityInput = event.target.previousElementSibling;
+    var quantity = parseInt(quantityInput.value);
+        if (quantity > 0) {
+			orders.push({
+            name: itemName,
+            price: price,
+            quantity: quantity
+            });
+            quantityInput.value = 0;
+            updateOrderList();
+        }
+    }
+	function updateOrderList() {
+    var orderList = document.getElementById('orderList');
+			orderList.innerHTML = ''; 
+	var total = 0;
+            orders.forEach(function(order) {
+    var listItem = document.createElement('li');
+            listItem.innerText = `${order.name} - Items: ${order.quantity} = Total: ${order.price * order.quantity}`;
+            orderList.appendChild(listItem);
+            total += order.price * order.quantity;
+            });
+    document.getElementById('totalOrder').innerText = 'P' + total;
+    }
+    function calculateTotalOrder() {
+           updateOrderList();
+    }
+</script>
+</body>
+</html>
